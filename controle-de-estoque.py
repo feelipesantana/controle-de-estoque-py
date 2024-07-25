@@ -3,9 +3,17 @@ products = []
 
 def add_product():
     product = input("Digite o nome do produto: ");
+    
     value = input("Digite o valor do produto: ");
+    if value.isnumeric() == False:
+      print("O valor do produto deve ser um número.");
+      return;
+    
     quantity = input("Digite a quantidade do produto: ");
- 
+    if quantity.isnumeric() == False:
+        print("A quantidade do produto deve ser um número.");
+        return;
+    
     new_product = {
       "name": product,
       "value": float(value),
